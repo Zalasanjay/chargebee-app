@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 let PORT = process.env.PORT || '8080';
-console.log(PORT);
+
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
   let createdPlan;
@@ -153,12 +153,6 @@ app.post('/changefeeds', function (req, res) {
   console.log('==============================================');
   console.log(req.body);
 });
-
-app.get('/feeds', function (req, res) {
-  console.log('==============================================');
-  console.log(req.body);
-});
-
 
 let server = app.listen(PORT, (port) => { 
   console.log('Probably listening to heroku PORT now %s',PORT);
