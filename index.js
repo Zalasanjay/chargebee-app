@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-chargebee.configure({site : process.env.site,  api_key : process.env.apiKey});
+chargebee.configure({site : process.env.site, api_key : process.env.apiKey});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

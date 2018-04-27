@@ -10,6 +10,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "start": "NODE_ENV=apiKey NODE_ENV=site node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
