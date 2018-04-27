@@ -7,7 +7,7 @@ chargebee.configure({site : process.env.site, api_key : process.env.apiKey});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let PORT = process.env.port || '80';
+let PORT = process.env.port || '8080';
 
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
@@ -153,6 +153,12 @@ app.post('/changefeeds', function (req, res) {
   console.log('==============================================');
   console.log(req.body);
 });
+
+app.get('/feeds', function (req, res) {
+  console.log('==============================================');
+  console.log(req.body);
+});
+
 
 let server = app.listen(PORT, (port) => { 
   console.log('ChargeBee app is running http://localhost:%s', server.address().port); 
