@@ -1,0 +1,33 @@
+{
+  "name": "chargebee-app",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chargebee": "^2.3.5",
+    "express": "^4.16.3"
+  },
+  "description": "chargebee implementation in node.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zalasanjay/chargebee-app.git"
+  },
+  "keywords": [
+    "chargebee",
+    "charge",
+    "bee",
+    "chargebee",
+    "nodejs",
+    "implementation"
+  ],
+  "author": "Sanjaysinh Zala (sanjaysinhz@officebrain.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zalasanjay/chargebee-app/issues"
+  },
+  "homepage": "https://github.com/Zalasanjay/chargebee-app#readme"
+}
