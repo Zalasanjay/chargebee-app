@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 let PORT = process.env.port || '8080';
-
+console.log(PORT);
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
   let createdPlan;
@@ -161,5 +161,5 @@ app.get('/feeds', function (req, res) {
 
 
 let server = app.listen(PORT, (port) => { 
-  console.log('ChargeBee app is running http://localhost:%s', server.address().port); 
+  console.log('Probably listening to heroku $PORT now ');
 });
