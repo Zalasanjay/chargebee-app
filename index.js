@@ -7,7 +7,7 @@ chargebee.configure({site : process.env.site, api_key : process.env.apiKey});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let PORT = process.env.port || '8080';
+let PORT = process.env.PORT || '8080';
 console.log(PORT);
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
@@ -161,5 +161,5 @@ app.get('/feeds', function (req, res) {
 
 
 let server = app.listen(PORT, (port) => { 
-  console.log('Probably listening to heroku $PORT now ');
+  console.log('Probably listening to heroku PORT now %s',PORT);
 });
