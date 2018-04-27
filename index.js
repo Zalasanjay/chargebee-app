@@ -7,7 +7,7 @@ chargebee.configure({site : process.env.site, api_key : process.env.apiKey});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let PORT = process.env.port || '2200';
+let PORT = process.env.port || '80';
 
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
