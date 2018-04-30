@@ -55,30 +55,6 @@ app.get('/plans/:id', function (req, res) {
   });
 });
 
-/* Get Plan List With Limit Attribute */
-app.get('/plans', function (req, res) {
-  let availablePlan;
-  let limit = req.query.limit || 10;
-  availablePlan = new Promise (function (resolve, reject) {
-    chargebee.plan.list({
-      limit: limit
-    }).request(function (error, result) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(result.list);
-      }
-    });
-  });
-  Promise.resolve(availablePlan).then(resp => {
-    console.log('Info Plans List');
-    res.send(resp);
-  }).catch(err => {
-    console.log('Error Plans List');
-    res.send(err);
-  });
-});
-
 /* Create New Plan */
 app.post('/plans', function (req, res) {
   const planDefinition = req.body;
