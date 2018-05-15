@@ -283,6 +283,7 @@ app.put('/addons/:id', function (req, res) {
 
 app.post('/changefeeds', function (req, res) {
   console.log(req.body);
+  res.send(req.body);
 });
 
 let server = app.listen(PORT, (port) => { 
